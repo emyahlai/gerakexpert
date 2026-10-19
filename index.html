@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Buang baris di bawah bila website sebenar sudah siap dan sedia untuk Google -->
+<meta name="robots" content="noindex">
+<title>Nama Syarikat Sdn Bhd</title>
+<meta name="description" content="Kontraktor binaan untuk rumah baharu, ubah suai, kedai dan pejabat. Sebut harga bertulis, jadual jelas, tapak kemas.">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout concept: hero biru tua dengan ilustrasi kren menara, panel statistik terapung, portfolio di latar gelap, selebihnya terang dan bersih. Satu aksen emas. */
+:root{
+  --bg:#F3F5F8;
+  --surface:#FFFFFF;
+  --fg:#0E1B2E;
+  --muted:#56657A;
+  --line:#D8DFE8;
+  --ink:#0B1F3A;
+  --ink2:#12315C;
+  --on-ink:#F2F6FB;
+  --on-ink-muted:#B4C3D8;
+  --gold:#F5B21A;
+  --gold-text:#8A5C00;
+  --tint:#FFF1CC;
+  --shadow:0 12px 32px rgba(11,31,58,.10);
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --body:"Manrope","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#08121F;--surface:#0F2037;--fg:#E8EEF6;--muted:#9DB0C6;--line:#1E3350;
+    --ink:#050E1A;--ink2:#0E2543;--gold-text:#F5B21A;--tint:rgba(245,178,26,.14);
+    --shadow:0 12px 32px rgba(0,0,0,.45);color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08121F;--surface:#0F2037;--fg:#E8EEF6;--muted:#9DB0C6;--line:#1E3350;
+  --ink:#050E1A;--ink2:#0E2543;--gold-text:#F5B21A;--tint:rgba(245,178,26,.14);
+  --shadow:0 12px 32px rgba(0,0,0,.45);color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.65 var(--body);-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+svg{display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance}
+.eyebrow{font:700 .76rem/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text)}
+.on-dark .eyebrow{color:var(--gold)}
+
+/* Butang */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.4rem;border:1.5px solid transparent;border-radius:10px;font:700 1rem/1.2 var(--body);text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:var(--gold);color:#0B1F3A}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(245,178,26,.35)}
+.btn-ghost{color:#fff;border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-small{padding:.6rem 1rem;font-size:.9rem}
+
+/* Header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ink);color:var(--on-ink);border-bottom:1px solid rgba(255,255,255,.08)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;min-width:0}
+.brand svg{flex:none;width:42px;height:42px}
+.brand b{display:block;font:700 1.25rem/1.1 var(--display);letter-spacing:.01em}
+.brand small{display:block;font:600 .66rem/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--on-ink-muted)}
+.nav{display:flex;align-items:center;gap:1.8rem}
+.nav a:not(.btn){font:600 .92rem/1 var(--body);color:var(--on-ink-muted);text-decoration:none;padding-block:.4rem;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav a:not(.btn):hover{color:#fff;border-bottom-color:var(--gold)}
+@media (max-width:860px){.nav a:not(.btn){display:none}.brand small{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;color:var(--on-ink);padding-block:clamp(2.5rem,6vw,5rem) clamp(5.5rem,10vw,7.5rem);background:radial-gradient(55% 60% at 85% 100%,rgba(245,178,26,.28),transparent 70%),linear-gradient(165deg,var(--ink) 0%,var(--ink2) 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.hero .wrap{position:relative}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(1.5rem,4vw,3rem);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.pill{display:inline-flex;align-items:center;gap:.55rem;padding:.5rem .85rem;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.06);font:600 .76rem/1 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--on-ink-muted)}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.hero h1{margin:1.3rem 0 1.2rem;font-weight:800;font-size:clamp(2.7rem,6.4vw,4.8rem);line-height:1.02;letter-spacing:-.02em;color:#fff}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.lead{max-width:54ch;font-size:1.1rem;color:var(--on-ink-muted)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:1.9rem}
+.trust{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;margin-top:1.8rem;font:600 .9rem/1.3 var(--body);color:var(--on-ink)}
+.trust li{display:flex;align-items:center;gap:.5rem}
+.trust svg{width:18px;height:18px;flex:none;stroke:var(--gold);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.scene{width:100%;max-width:560px;height:auto;margin-inline:auto}
+.scene .load{transform-origin:300px 50px;animation:sway 4.6s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-1.7deg)}to{transform:rotate(1.7deg)}}
+.scene .blink{animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* Statistik terapung */
+.stats-wrap{position:relative;z-index:2;margin-top:calc(-1 * clamp(2.6rem,5vw,3.6rem))}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.stats div{display:flex;flex-direction:column-reverse;justify-content:flex-end;padding:1.3rem 1.4rem}
+.stats div+div{border-left:1px solid var(--line)}
+.stats dd{font:800 clamp(1.9rem,4vw,2.8rem)/1.05 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats dt{margin-top:.3rem;font:600 .82rem/1.35 var(--body);color:var(--muted)}
+@media (max-width:720px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats div:nth-child(odd){border-left:0}
+  .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* Seksyen */
+section{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.sec-head{display:grid;gap:.8rem;margin-bottom:clamp(1.6rem,4vw,2.8rem);max-width:40rem}
+.sec-head h2{font-weight:700;font-size:clamp(2rem,4.6vw,3.1rem);line-height:1.06;letter-spacing:-.015em}
+.sec-head p{color:var(--muted)}
+.on-dark .sec-head p{color:var(--on-ink-muted)}
+
+/* Perkhidmatan */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:1.2rem}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .2s,box-shadow .2s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ico{width:52px;height:52px;border-radius:14px;background:var(--tint);color:var(--gold-text);display:grid;place-items:center;margin-bottom:.6rem}
+.ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-weight:700;font-size:1.35rem;line-height:1.15}
+.svc p{color:var(--muted);font-size:.98rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;padding-top:.7rem}
+.tags span{font:600 .74rem/1 var(--body);padding:.38rem .65rem;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+
+/* Projek */
+.on-dark{background:var(--ink);color:var(--on-ink)}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.6rem}
+.filters button{font:600 .88rem/1 var(--body);padding:.65rem 1.05rem;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:transparent;color:var(--on-ink);cursor:pointer;transition:background .15s}
+.filters button:hover{background:rgba(255,255,255,.1)}
+.filters button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#0B1F3A}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:1.3rem}
+.card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;min-width:0;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:rgba(245,178,26,.6)}
+.card[hidden]{display:none}
+.plate{position:relative;padding:2.6rem 1.2rem .4rem;background:linear-gradient(145deg,var(--ink2),#0A2447)}
+.plate::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px}
+.plate .cat{position:absolute;top:.9rem;left:.9rem;z-index:1;font:700 .68rem/1 var(--body);letter-spacing:.08em;text-transform:uppercase;background:var(--gold);color:#0B1F3A;padding:.38rem .65rem;border-radius:999px}
+.drawing{position:relative;width:100%;height:auto;max-width:100%}
+.dr .ln{fill:none;stroke:#C9D8EC;stroke-width:1.6;stroke-linejoin:miter}
+.dr .thin{fill:none;stroke:#6F8DB5;stroke-width:1}
+.dr .acc{fill:#F5B21A;stroke:#C9D8EC;stroke-width:1.6}
+.dr .dash{fill:none;stroke:#C9D8EC;stroke-width:1.4;stroke-dasharray:5 4}
+.dr .accsoft{fill:#F5B21A;fill-opacity:.4;stroke:#C9D8EC;stroke-width:1.4;stroke-dasharray:5 4}
+.dr .txt{font:600 10px var(--body);letter-spacing:.1em;fill:#C9D8EC}
+.card .body{padding:1.1rem 1.3rem 1.4rem;display:grid;gap:.3rem}
+.card h3{font-weight:700;font-size:1.3rem;line-height:1.15;color:#fff}
+.card .meta{font-size:.86rem;color:var(--on-ink-muted)}
+
+/* Proses + bangunan naik ikut scroll */
+.proc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.proc-art{grid-column:2;grid-row:1;align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
+.steps{grid-column:1;grid-row:1;display:grid}
+.steps li{position:relative;padding:0 0 2.4rem 70px;min-height:110px;transition:opacity .3s}
+.steps li.dim{opacity:.6}
+.steps .n{position:absolute;left:0;top:0;width:46px;height:46px;border-radius:50%;background:var(--ink2);border:2px solid rgba(245,178,26,.5);color:var(--gold);display:grid;place-items:center;font:700 1.05rem/1 var(--display);z-index:1;transition:background .3s,color .3s,border-color .3s}
+.steps li.on .n,.steps li.done .n{border-color:var(--gold)}
+.steps li.on .n{background:var(--gold);color:#0B1F3A}
+.steps li::after{content:"";position:absolute;top:52px;bottom:6px;left:22px;width:2px;background:rgba(255,255,255,.16)}
+.steps li:last-child{padding-bottom:0;min-height:0}
+.steps li:last-child::after{display:none}
+.steps h3{font-weight:700;font-size:1.4rem;line-height:1.15;margin:.55rem 0 .4rem;color:#fff}
+.steps p{color:var(--on-ink-muted);font-size:.98rem;max-width:44ch}
+.build{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--ink2),#0A2447);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:1rem 1rem .9rem}
+.build::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px}
+.build svg{position:relative;width:100%;height:auto;max-height:62vh}
+.build .cap{position:relative;display:flex;justify-content:space-between;gap:1rem;margin-top:.5rem;font:700 .78rem/1.3 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--on-ink-muted)}
+.build .cap b{color:var(--gold)}
+.build .bt{font:600 11px var(--body);letter-spacing:.1em;fill:#C9D8EC}
+.build .s{transition:opacity .5s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.build.js .s{opacity:0}
+.build.js .rise{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(.05)}
+.build.js .s.show{opacity:1}
+.build.js .rise.show{transform:none}
+.build.js .s.show.fade{opacity:.2}
+@media (max-width:900px){
+  .proc{display:block}
+  .proc-art{top:calc(env(safe-area-inset-top,0px) + 4.4rem);z-index:5;margin-bottom:1.6rem}
+  .build{padding:.5rem .8rem .6rem;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+  .build svg{max-height:23vh}
+  .steps li{padding-left:62px;min-height:0;padding-bottom:1.8rem}
+}
+
+/* Kenapa */
+.why{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(1.5rem,4vw,3rem);align-items:stretch}
+@media (max-width:900px){.why{grid-template-columns:minmax(0,1fr)}}
+.why-panel{display:flex;flex-direction:column;justify-content:space-between;gap:1.8rem;padding:clamp(1.6rem,4vw,2.8rem);border-radius:22px;color:var(--on-ink);background:radial-gradient(60% 50% at 100% 100%,rgba(245,178,26,.25),transparent 70%),linear-gradient(160deg,var(--ink),var(--ink2))}
+.why-panel h2{font-weight:700;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.08;letter-spacing:-.015em;margin-top:.8rem}
+.why-panel p{color:var(--on-ink-muted);margin-top:.9rem;max-width:42ch}
+.why-panel .btn{align-self:flex-start}
+.pts{display:grid;gap:0}
+.pts li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem;padding:1.3rem 0;border-top:1px solid var(--line)}
+.pts li:first-child{border-top:0;padding-top:.2rem}
+.pts .tick{width:40px;height:40px;border-radius:50%;background:var(--tint);display:grid;place-items:center}
+.pts .tick svg{width:20px;height:20px;fill:none;stroke:var(--gold-text);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.pts h3{font-weight:700;font-size:1.25rem;line-height:1.2;margin-bottom:.25rem}
+.pts p{color:var(--muted);font-size:.96rem}
+
+/* Hubungi */
+.contact{background:var(--surface);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.5rem,5vw,4rem);align-items:start}
+@media (max-width:900px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
+.info{display:grid;margin-top:1.6rem}
+.info div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.15rem .8rem;align-items:center;padding:1rem 0;border-top:1px solid var(--line)}
+.info div:last-child{border-bottom:1px solid var(--line)}
+.info dt{grid-column:1/-1;font:700 .7rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.info dd{font-weight:600;overflow-wrap:anywhere}
+.copy{font:700 .78rem/1 var(--body);padding:.55rem .85rem;border:1.5px solid var(--line);border-radius:999px;background:transparent;color:var(--fg);cursor:pointer;min-width:5.6rem;transition:background .15s,border-color .15s}
+.copy:hover{border-color:var(--gold);background:var(--tint)}
+form{display:grid;gap:1.1rem;background:var(--bg);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:clamp(1.3rem,3vw,2rem)}
+.field{display:grid;gap:.45rem;min-width:0}
+label{font:700 .8rem/1.2 var(--body);color:var(--muted)}
+input,select,textarea{width:100%;min-width:0;font:500 1rem/1.4 var(--body);color:var(--fg);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:.8rem .9rem}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,178,26,.28)}
+textarea{resize:vertical;min-height:6.5rem}
+.form-note{font-size:.85rem;color:var(--muted)}
+
+/* Gambar sebenar dalam kad projek */
+.plate.photo{padding:0}
+.plate.photo::before{display:none}
+.plate.photo .shot{position:relative;display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+
+/* Sebelum dan selepas */
+.ba-sec{background:var(--surface);border-block:1px solid var(--line)}
+.ba-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(1.5rem,4vw,3rem);align-items:center}
+@media (max-width:900px){.ba-grid{grid-template-columns:minmax(0,1fr)}}
+.ba{--pos:50%;position:relative;aspect-ratio:600/360;max-width:100%;overflow:hidden;border-radius:20px;border:1px solid var(--line);box-shadow:var(--shadow);background:#CBD2D9}
+.ba-layer{position:absolute;inset:0;width:100%;height:100%;display:block}
+.ba .before{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(11,31,58,.25);pointer-events:none}
+.ba-handle span{position:absolute;top:50%;left:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:var(--gold);border:3px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.3);display:grid;place-items:center;font:700 20px/1 var(--body);color:#0B1F3A}
+.ba .chip{position:absolute;top:.8rem;padding:.38rem .7rem;border-radius:999px;background:rgba(11,31,58,.85);color:#fff;font:700 .72rem/1 var(--body);letter-spacing:.1em;text-transform:uppercase;pointer-events:none}
+.ba .chip.l{left:.8rem}
+.ba .chip.r{right:.8rem}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+.ba:focus-within{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Pelan lantai interaktif */
+.plan-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(1.2rem,3vw,2rem);align-items:stretch}
+@media (max-width:900px){.plan-grid{grid-template-columns:minmax(0,1fr)}}
+.plan-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:clamp(.8rem,2vw,1.4rem)}
+.plan-card svg{width:100%;height:auto}
+.room{cursor:pointer;outline:none}
+.room .base{fill:var(--bg);stroke:var(--fg);stroke-width:3;transition:fill .2s}
+.room:hover .base{fill:var(--tint)}
+.room[aria-pressed="true"] .base{fill:var(--gold)}
+.room:focus-visible .base{stroke:var(--gold-text);stroke-width:5}
+.fx{fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linejoin:round}
+.room[aria-pressed="true"] .fx{stroke:#0B1F3A}
+.rl{font:700 15px var(--body);fill:var(--fg);text-anchor:middle;pointer-events:none}
+.room[aria-pressed="true"] .rl{fill:#0B1F3A}
+.plan-detail{display:flex;flex-direction:column;gap:.9rem;background:var(--ink);color:var(--on-ink);border-radius:20px;padding:clamp(1.3rem,3vw,2rem)}
+.plan-detail .eyebrow{color:var(--gold)}
+.plan-detail h3{font-weight:700;font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.05;color:#fff}
+.plan-detail p{color:var(--on-ink-muted)}
+.plan-detail .tags{margin-top:0;padding-top:0}
+.plan-detail .tags span{border-color:rgba(255,255,255,.25);color:var(--on-ink)}
+.pd-time dt{font:700 .7rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--on-ink-muted)}
+.pd-time dd{font:800 1.7rem/1.2 var(--display);color:#fff}
+.plan-detail .btn{margin-top:auto;align-self:flex-start}
+
+/* Lesen dan FAQ */
+.creds-sec{padding-block:0 clamp(3.5rem,8vw,6rem)}
+.creds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:.9rem;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+.creds div{display:grid;gap:.25rem;padding:1.2rem 1.4rem}
+.creds div+div{border-left:1px solid var(--line)}
+.creds dt{font:700 .7rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.creds dd{font-weight:700;font-size:1.05rem;overflow-wrap:anywhere}
+@media (max-width:720px){.creds{grid-template-columns:minmax(0,1fr)}.creds div+div{border-left:0;border-top:1px solid var(--line)}}
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1.5rem,4vw,3rem);align-items:start}
+@media (max-width:900px){.faq{grid-template-columns:minmax(0,1fr)}}
+.faq .sec-head{margin-bottom:0}
+.faq-list{border-bottom:1px solid var(--line)}
+details{border-top:1px solid var(--line)}
+summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.15rem .2rem;list-style:none;cursor:pointer;font:700 1.05rem/1.4 var(--body)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 1.2rem/1 var(--body);color:var(--gold-text)}
+details[open] summary::after{content:"\2212";background:var(--tint);border-color:var(--gold)}
+details p{padding:0 2.6rem 1.3rem .2rem;color:var(--muted)}
+
+/* Footer */
+footer{background:var(--ink);color:var(--on-ink);padding-block:2rem calc(2rem + 4.5rem)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;font-size:.85rem;color:var(--on-ink-muted)}
+@media (min-width:721px){footer{padding-block:2rem}}
+
+/* Butang WhatsApp terapung (telefon) */
+.wa-float{display:none;position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:25;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+@media (max-width:720px){.wa-float{display:inline-flex}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scene .load,.scene .blink{animation:none}.btn,.svc,.card,.build .s,.steps li,.steps .n,.room .base{transition:none}.btn-gold:hover,.svc:hover,.card:hover{transform:none}}
+</style>
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<!-- NOTA UNTUK PEMILIK: semua nama, nombor, angka statistik, lokasi dan butiran projek di bawah ialah contoh. Gantikan dengan maklumat sebenar. -->
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#atas" aria-label="Nama Syarikat, ke atas">
+      <svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="11" fill="#F5B21A"/><path d="M8 32V17l13-8 13 8v15" fill="none" stroke="#0B1F3A" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round"/><path d="M15 32V22h12v10" fill="none" stroke="#0B1F3A" stroke-width="2.8" stroke-linejoin="round"/></svg>
+      <span><b>Nama Syarikat</b><small>Pembinaan &amp; Pengubahsuaian</small></span>
+    </a>
+    <nav class="nav" aria-label="Utama">
+      <a href="#perkhidmatan">Perkhidmatan</a>
+      <a href="#projek">Projek</a>
+      <a href="#proses">Proses</a>
+      <a href="#faq">Soalan lazim</a>
+      <a href="#hubungi">Hubungi</a>
+      <a class="btn btn-gold btn-small" data-wa href="https://wa.me/60100000000" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="atas">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="pill">Kontraktor binaan · rumah &amp; komersial</span>
+          <h1>Bina betul. <em>Siap ikut jadual.</em></h1>
+          <p class="lead">Dari rumah baharu hingga ubah suai kedai, kami uruskan kerja tapak dari hari pertama sampai serah kunci. Harga dinyatakan jelas, kemajuan kerja dilaporkan, dan tapak sentiasa kemas.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold" data-wa href="https://wa.me/60100000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg>WhatsApp untuk sebut harga</a>
+            <a class="btn btn-ghost" href="#projek">Lihat projek</a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>Tinjau tapak percuma</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>Sebut harga bertulis</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>Waranti kerja</li>
+          </ul>
+        </div>
+
+        <svg class="scene" viewBox="0 0 560 520" role="img" aria-label="Ilustrasi bangunan sedang dibina dengan kren menara">
+          <!-- latar bandar -->
+          <g fill="#0F2A4D" data-par="0.07">
+            <rect x="0" y="360" width="46" height="120"/><rect x="46" y="320" width="38" height="160"/><rect x="84" y="380" width="30" height="100"/>
+            <rect x="500" y="390" width="60" height="90"/><rect x="430" y="420" width="40" height="60"/>
+          </g>
+          <rect x="0" y="480" width="560" height="40" fill="#081A33" opacity=".55"/>
+          <line x1="0" y1="480" x2="560" y2="480" stroke="#4A6C99" stroke-width="2"/>
+
+          <!-- bangunan -->
+          <g>
+            <g fill="#27487A">
+              <rect x="116" y="130" width="8" height="350"/><rect x="186" y="130" width="8" height="350"/><rect x="256" y="130" width="8" height="350"/><rect x="326" y="130" width="8" height="350"/><rect x="396" y="130" width="8" height="350"/>
+            </g>
+            <g fill="#16335A" stroke="#3E6AA3" stroke-width="1">
+              <rect x="124" y="422" width="58" height="54"/><rect x="194" y="422" width="58" height="54"/><rect x="264" y="422" width="58" height="54"/><rect x="334" y="422" width="58" height="54"/>
+              <rect x="124" y="352" width="58" height="54"/><rect x="194" y="352" width="58" height="54"/><rect x="264" y="352" width="58" height="54"/><rect x="334" y="352" width="58" height="54"/>
+              <rect x="124" y="282" width="58" height="54"/><rect x="194" y="282" width="58" height="54"/><rect x="264" y="282" width="58" height="54"/><rect x="334" y="282" width="58" height="54"/>
+            </g>
+            <g fill="#F5B21A" opacity=".9">
+              <rect x="124" y="422" width="58" height="54"/><rect x="264" y="422" width="58" height="54"/>
+              <rect x="194" y="352" width="58" height="54"/><rect x="334" y="352" width="58" height="54"/>
+              <rect x="124" y="282" width="58" height="54"/><rect x="194" y="282" width="58" height="54"/><rect x="334" y="282" width="58" height="54"/>
+            </g>
+            <g fill="#3A6196">
+              <rect x="108" y="410" width="304" height="8"/><rect x="108" y="340" width="304" height="8"/><rect x="108" y="270" width="304" height="8"/><rect x="108" y="200" width="304" height="8"/><rect x="108" y="130" width="304" height="8"/>
+            </g>
+            <g stroke="#5B7FAE" stroke-width="1.2" fill="none">
+              <line x1="196" y1="210" x2="254" y2="268"/><line x1="254" y1="210" x2="196" y2="268"/>
+              <line x1="336" y1="140" x2="394" y2="198"/><line x1="394" y1="140" x2="336" y2="198"/>
+            </g>
+            <g stroke="#7FA0CF" stroke-width="1.6">
+              <line x1="120" y1="130" x2="120" y2="112"/><line x1="190" y1="130" x2="190" y2="112"/><line x1="260" y1="130" x2="260" y2="112"/><line x1="330" y1="130" x2="330" y2="112"/><line x1="400" y1="130" x2="400" y2="112"/>
+            </g>
+          </g>
+
+          <!-- kren menara -->
+          <g fill="none" stroke="#8FB0DA" stroke-width="1.6" stroke-linejoin="round">
+            <line x1="462" y1="480" x2="462" y2="50"/><line x1="478" y1="480" x2="478" y2="50"/>
+            <polyline stroke-width="1.1" points="462,480 478,460 462,440 478,420 462,400 478,380 462,360 478,340 462,320 478,300 462,280 478,260 462,240 478,220 462,200 478,180 462,160 478,140 462,120 478,100 462,80 478,60"/>
+            <line x1="210" y1="40" x2="540" y2="40"/><line x1="210" y1="50" x2="540" y2="50"/>
+            <polyline stroke-width="1.1" points="210,50 235,40 260,50 285,40 310,50 335,40 360,50 385,40 410,50 435,40 460,50 485,40 510,50 535,40"/>
+            <line x1="470" y1="14" x2="210" y2="40" stroke-width="1"/><line x1="470" y1="14" x2="540" y2="40" stroke-width="1"/><line x1="470" y1="14" x2="470" y2="38" stroke-width="1.4"/>
+          </g>
+          <rect x="452" y="474" width="36" height="6" fill="#27487A"/>
+          <rect x="456" y="36" width="28" height="14" rx="2" fill="#27487A" stroke="#8FB0DA" stroke-width="1"/>
+          <rect x="486" y="36" width="14" height="14" rx="2" fill="#F5B21A" opacity=".85"/>
+          <rect x="520" y="50" width="24" height="22" fill="#3A6196"/>
+          <circle class="blink" cx="470" cy="12" r="3.5" fill="#F5B21A"/>
+          <rect x="292" y="50" width="16" height="5" fill="#C9D8EC"/>
+          <g class="load">
+            <line x1="300" y1="55" x2="300" y2="90" stroke="#C9D8EC" stroke-width="1.5"/>
+            <rect x="296" y="90" width="8" height="6" fill="#C9D8EC"/>
+            <line x1="300" y1="96" x2="274" y2="102" stroke="#C9D8EC" stroke-width="1"/><line x1="300" y1="96" x2="326" y2="102" stroke="#C9D8EC" stroke-width="1"/>
+            <rect x="268" y="102" width="64" height="8" fill="#F5B21A"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-wrap wrap">
+    <dl class="stats">
+      <div><dt>Tahun pengalaman</dt><dd data-n="10" data-suf="+">10+</dd></div>
+      <div><dt>Projek siap</dt><dd data-n="150" data-suf="+">150+</dd></div>
+      <div><dt>Sebut harga selepas tinjau tapak</dt><dd data-n="2" data-suf=" hari">2 hari</dd></div>
+      <div><dt>Lawatan tapak pertama</dt><dd>RM0</dd></div>
+    </dl>
+  </div>
+
+  <section id="perkhidmatan">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Perkhidmatan</p>
+        <h2>Apa yang kami buat</h2>
+        <p>Kerja kecil atau besar, skop ditulis dengan jelas sebelum kerja bermula.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><h3>Rumah baharu</h3><p>Bina rumah teres, semi-D dan banglo di atas tanah sendiri, termasuk kerja tanah, asas dan struktur sehingga siap.</p><div class="tags"><span>Asas</span><span>Struktur</span><span>Siap kunci</span></div></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><h3>Ubah suai rumah</h3><p>Tambah bilik, besarkan dapur, naik taraf bilik air dan ubah susun atur supaya rumah lebih selesa.</p><div class="tags"><span>Dapur</span><span>Bilik air</span><span>Extension</span></div></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-2 8 2v16M9 9h2M13 9h2M9 13h2M13 13h2M10 21v-4h4v4"/></svg></div><h3>Kedai &amp; pejabat</h3><p>Fit-out dan ubah suai lot kedai, pejabat dan premis perniagaan dengan jadual yang tak ganggu operasi anda.</p><div class="tags"><span>Partition</span><span>Siling</span><span>Lantai</span></div></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v4H3zM3 14h8v4H3zM13 14h8v4h-8z"/></svg></div><h3>Kerja struktur</h3><p>Konkrit, besi tetulang, bata dan plaster untuk projek kecil hingga sederhana, dikawal ikut lukisan.</p><div class="tags"><span>Konkrit</span><span>Bata</span><span>Plaster</span></div></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12l10-8 10 8M5 10v10h14V10"/></svg></div><h3>Bumbung &amp; siling</h3><p>Rangka bumbung, jubin atau metal deck, talang air dan siling plaster dengan kemasan yang kemas.</p><div class="tags"><span>Rangka</span><span>Talang</span><span>Siling</span></div></article>
+        <article class="svc"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Baik pulih</h3><p>Atasi dinding retak, bocor dan lembap dengan pembaikan yang kekal, bukan sekadar cat semula.</p><div class="tags"><span>Bocor</span><span>Retak</span><span>Cat</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projek" class="on-dark">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Projek terkini</h2>
+        <p>Pilih jenis kerja untuk tapis senarai.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Tapis projek">
+        <button type="button" data-f="semua" aria-pressed="true">Semua</button>
+        <button type="button" data-f="rumah" aria-pressed="false">Rumah baharu</button>
+        <button type="button" data-f="ubahsuai" aria-pressed="false">Ubah suai</button>
+        <button type="button" data-f="komersial" aria-pressed="false">Komersial</button>
+        <button type="button" data-f="bumbung" aria-pressed="false">Bumbung</button>
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <!-- NOTA: slider ini guna ilustrasi contoh. Gantikan kedua-dua <svg class="ba-layer"> dengan gambar projek sebenar (sebelum dan selepas, nisbah 5:3). -->
+  <section id="sebelum" class="ba-sec">
+    <div class="wrap ba-grid">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Sebelum dan selepas</p>
+        <h2>Rumah lama, rupa baharu</h2>
+        <p>Geser untuk bandingkan keadaan asal dengan hasil siap. Kerja yang sama kami buat untuk rumah anda.</p>
+        <a class="btn btn-gold" data-wa href="https://wa.me/60100000000" target="_blank" rel="noopener" style="justify-self:start">Mulakan projek anda</a>
+      </div>
+      <div>
+        <div class="ba" id="ba">
+          <svg class="ba-layer after" viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BCD8F3"/><stop offset="1" stop-color="#EEF6FD"/></linearGradient></defs>
+            <rect width="600" height="360" fill="url(#skyA)"/>
+            <circle cx="505" cy="70" r="26" fill="#F5B21A" opacity=".85"/>
+            <rect y="290" width="600" height="70" fill="#9CC184"/>
+            <rect x="226" y="290" width="88" height="70" fill="#CBD2D9"/>
+            <rect x="82" y="238" width="8" height="52" fill="#7A5A3C"/><circle cx="86" cy="226" r="30" fill="#5E9A4C"/>
+            <rect x="150" y="150" width="240" height="140" fill="#F2F4F7" stroke="#C3CCD6" stroke-width="2"/>
+            <rect x="385" y="186" width="145" height="104" fill="#E4E9EF" stroke="#C3CCD6" stroke-width="2"/>
+            <rect x="378" y="178" width="159" height="12" fill="#1F3F6B"/>
+            <rect x="402" y="206" width="96" height="62" fill="#F5B21A" stroke="#12315C" stroke-width="2.5"/><line x1="450" y1="206" x2="450" y2="268" stroke="#12315C" stroke-width="2.5"/>
+            <polygon points="130,150 270,90 410,150" fill="#1F3F6B" stroke="#12315C" stroke-width="2" stroke-linejoin="round"/>
+            <rect x="250" y="225" width="36" height="65" fill="#12315C"/><circle cx="278" cy="258" r="2.5" fill="#F5B21A"/>
+            <rect x="175" y="185" width="50" height="45" fill="#F5B21A" stroke="#12315C" stroke-width="2.5"/><line x1="200" y1="185" x2="200" y2="230" stroke="#12315C" stroke-width="2"/>
+            <rect x="315" y="185" width="50" height="45" fill="#F5B21A" stroke="#12315C" stroke-width="2.5"/><line x1="340" y1="185" x2="340" y2="230" stroke="#12315C" stroke-width="2"/>
+            <g fill="#5E9A4C"><circle cx="160" cy="282" r="10"/><circle cx="176" cy="284" r="8"/><circle cx="340" cy="282" r="10"/><circle cx="358" cy="284" r="8"/></g>
+          </svg>
+          <svg class="ba-layer before" viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8F9BA8"/><stop offset="1" stop-color="#C4CBD2"/></linearGradient></defs>
+            <rect width="600" height="360" fill="url(#skyB)"/>
+            <rect y="290" width="600" height="70" fill="#7A7D70"/>
+            <g stroke="#6A6258" stroke-width="4"><line x1="430" y1="290" x2="430" y2="245"/><line x1="470" y1="290" x2="470" y2="252"/><line x1="510" y1="290" x2="506" y2="262"/><line x1="548" y1="290" x2="548" y2="248"/></g>
+            <line x1="430" y1="262" x2="470" y2="266" stroke="#6A6258" stroke-width="3"/>
+            <rect x="150" y="150" width="240" height="140" fill="#B7AE9F" stroke="#7B7468" stroke-width="2"/>
+            <g fill="#D3CBBD"><rect x="160" y="158" width="34" height="18"/><rect x="330" y="240" width="40" height="26"/><rect x="262" y="160" width="22" height="30"/></g>
+            <g fill="#8E8576"><rect x="196" y="262" width="60" height="28"/><rect x="340" y="156" width="30" height="40"/></g>
+            <polygon points="130,150 270,90 410,150" fill="#6C6A66" stroke="#4E4C49" stroke-width="2" stroke-linejoin="round"/>
+            <g fill="#4E4C49"><rect x="230" y="118" width="14" height="9"/><rect x="290" y="112" width="12" height="8"/><rect x="326" y="132" width="16" height="9"/></g>
+            <polyline points="205,150 217,176 209,196 226,222" fill="none" stroke="#5B554C" stroke-width="2.5"/>
+            <polyline points="352,200 345,222 358,244" fill="none" stroke="#5B554C" stroke-width="2"/>
+            <rect x="250" y="225" width="36" height="65" fill="#6B4F3A" stroke="#4B392A" stroke-width="2"/>
+            <rect x="175" y="185" width="50" height="45" fill="#5F6B77" stroke="#4B392A" stroke-width="2"/><line x1="175" y1="185" x2="225" y2="230" stroke="#3E4650" stroke-width="2"/><line x1="225" y1="185" x2="175" y2="230" stroke="#3E4650" stroke-width="2"/>
+            <rect x="315" y="185" width="50" height="45" fill="#7B6A55" stroke="#4B392A" stroke-width="2"/><g stroke="#4B392A" stroke-width="2"><line x1="315" y1="200" x2="365" y2="200"/><line x1="315" y1="215" x2="365" y2="215"/></g>
+            <path d="M160 290 l-4 -16 M166 290 l2 -20 M172 290 l6 -14 M330 290 l-3 -18 M338 290 l3 -22 M346 290 l7 -14 M60 290 l-3 -14 M68 290 l4 -18 M440 290 l-3 -16 M450 290 l4 -20" fill="none" stroke="#566349" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="chip l">Sebelum</span><span class="chip r">Selepas</span>
+          <div class="ba-handle" aria-hidden="true"><span>&#8596;</span></div>
+          <input id="ba-range" type="range" min="0" max="100" value="50" aria-label="Geser untuk bandingkan sebelum dan selepas">
+        </div>
+        <p class="form-note" style="margin-top:.8rem">Ilustrasi contoh. Gambar projek sebenar akan diletakkan di sini.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTA: anggaran tempoh setiap bilik di bawah ialah contoh. Semak dengan kontraktor. -->
+  <section id="pelan">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Ubah suai ikut bilik</p>
+        <h2>Bilik mana yang nak diubah?</h2>
+        <p>Tekan bilik pada pelan untuk lihat kerja yang biasa dibuat dan anggaran tempohnya.</p>
+      </div>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <svg id="plan" viewBox="0 0 600 380" role="group" aria-label="Pelan lantai sebuah rumah. Pilih bilik.">
+            <g class="room" role="button" tabindex="0" aria-pressed="false" aria-label="Bilik tidur utama" data-room="utama">
+              <rect class="base" x="20" y="20" width="210" height="170"/>
+              <rect class="fx" x="55" y="45" width="100" height="85" rx="4"/><line class="fx" x1="55" y1="68" x2="155" y2="68"/>
+              <rect class="fx" x="175" y="45" width="40" height="40"/>
+              <text class="rl" x="125" y="172">Bilik tidur utama</text>
+            </g>
+            <g class="room" role="button" tabindex="0" aria-pressed="false" aria-label="Bilik air" data-room="air">
+              <rect class="base" x="230" y="20" width="110" height="170"/>
+              <rect class="fx" x="245" y="40" width="80" height="38" rx="10"/>
+              <rect class="fx" x="272" y="96" width="26" height="12" rx="3"/><circle class="fx" cx="285" cy="122" r="14"/>
+              <text class="rl" x="285" y="172">Bilik air</text>
+            </g>
+            <g class="room" role="button" tabindex="0" aria-pressed="false" aria-label="Bilik tidur 2" data-room="tidur2">
+              <rect class="base" x="340" y="20" width="240" height="170"/>
+              <rect class="fx" x="375" y="45" width="95" height="80" rx="4"/><line class="fx" x1="375" y1="68" x2="470" y2="68"/>
+              <rect class="fx" x="505" y="45" width="60" height="30"/>
+              <text class="rl" x="460" y="172">Bilik tidur 2</text>
+            </g>
+            <g class="room" role="button" tabindex="0" aria-pressed="false" aria-label="Ruang tamu" data-room="tamu">
+              <rect class="base" x="20" y="190" width="340" height="170"/>
+              <rect class="fx" x="50" y="225" width="130" height="42" rx="8"/>
+              <rect class="fx" x="75" y="285" width="80" height="34" rx="4"/>
+              <rect class="fx" x="270" y="215" width="70" height="14"/>
+              <text class="rl" x="190" y="345">Ruang tamu</text>
+            </g>
+            <g class="room" role="button" tabindex="0" aria-pressed="true" aria-label="Dapur" data-room="dapur">
+              <rect class="base" x="360" y="190" width="220" height="170"/>
+              <rect class="fx" x="378" y="206" width="184" height="26"/><rect class="fx" x="378" y="232" width="26" height="70"/>
+              <rect class="fx" x="440" y="262" width="100" height="26" rx="3"/>
+              <text class="rl" x="470" y="345">Dapur</text>
+            </g>
+          </svg>
+        </div>
+        <div class="plan-detail" aria-live="polite">
+          <p class="eyebrow">Bilik dipilih</p>
+          <h3 id="pd-name">Dapur</h3>
+          <p id="pd-desc">Dapur paling kerap diubah suai. Kabinet, meja, jubin, paip dan pendawaian disiapkan sebagai satu kerja.</p>
+          <div class="tags" id="pd-tags"><span>Kabinet &amp; meja</span><span>Jubin</span><span>Paip &amp; pendawaian</span><span>Siling &amp; lampu</span></div>
+          <dl class="pd-time"><dt>Anggaran tempoh</dt><dd id="pd-time">2 – 4 minggu</dd></dl>
+          <p class="form-note" style="color:var(--on-ink-muted)">Anggaran sahaja. Tempoh sebenar bergantung pada skop dan keadaan tapak.</p>
+          <a class="btn btn-gold" id="pd-wa" href="https://wa.me/60100000000" target="_blank" rel="noopener">Tanya tentang bilik ini</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proses" class="on-dark">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Cara kami bekerja</p>
+        <h2>Dari tinjau tapak sampai serah kunci</h2>
+        <p>Lima langkah yang sama untuk setiap projek, supaya anda tahu apa seterusnya.</p>
+      </div>
+      <div class="proc">
+      <div class="proc-art" id="proc-art">
+        <div class="build" id="build">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Ilustrasi bangunan yang dibina peringkat demi peringkat mengikut langkah kerja">
+            <defs><pattern id="hatch2" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#4A6C99" stroke-width="1"/></pattern></defs>
+            <rect x="20" y="340" width="360" height="12" fill="url(#hatch2)"/>
+            <line x1="20" y1="340" x2="380" y2="340" stroke="#8FB0DA" stroke-width="2"/>
+            <g class="s" data-s="1" data-fade="3">
+              <line x1="60" y1="340" x2="60" y2="312" stroke="#F5B21A" stroke-width="3"/><line x1="340" y1="340" x2="340" y2="312" stroke="#F5B21A" stroke-width="3"/>
+              <polygon points="60,312 76,317 60,322" fill="#F5B21A"/><polygon points="340,312 324,317 340,322" fill="#F5B21A"/>
+              <line x1="60" y1="320" x2="340" y2="320" stroke="#F5B21A" stroke-width="1.2" stroke-dasharray="6 5"/>
+            </g>
+            <g class="s" data-s="2" data-fade="4">
+              <rect x="90" y="180" width="220" height="160" fill="none" stroke="#C9D8EC" stroke-width="1.4" stroke-dasharray="6 5"/>
+              <polygon points="70,180 200,120 330,180" fill="none" stroke="#C9D8EC" stroke-width="1.4" stroke-dasharray="6 5"/>
+              <line x1="90" y1="260" x2="310" y2="260" stroke="#C9D8EC" stroke-width="1" stroke-dasharray="3 5"/>
+              <line x1="90" y1="372" x2="310" y2="372" stroke="#C9D8EC" stroke-width="1"/>
+              <line x1="90" y1="366" x2="90" y2="378" stroke="#C9D8EC" stroke-width="1.4"/><line x1="310" y1="366" x2="310" y2="378" stroke="#C9D8EC" stroke-width="1.4"/>
+              <text class="bt" x="200" y="392" text-anchor="middle">12.00 m</text>
+            </g>
+            <g class="s rise" data-s="3">
+              <rect x="80" y="340" width="240" height="12" fill="#27487A"/>
+              <g fill="#3A6196"><rect x="86" y="260" width="8" height="80"/><rect x="159" y="260" width="8" height="80"/><rect x="232" y="260" width="8" height="80"/><rect x="306" y="260" width="8" height="80"/></g>
+              <rect x="82" y="256" width="236" height="8" fill="#4C7AB5"/>
+            </g>
+            <g class="s rise" data-s="4">
+              <g fill="#16335A" stroke="#3E6AA3" stroke-width="1">
+                <rect x="96" y="268" width="59" height="68"/><rect x="169" y="268" width="59" height="68"/><rect x="242" y="268" width="59" height="68"/>
+                <rect x="96" y="192" width="59" height="60"/><rect x="169" y="192" width="59" height="60"/><rect x="242" y="192" width="59" height="60"/>
+              </g>
+              <g fill="#3A6196"><rect x="86" y="184" width="8" height="72"/><rect x="159" y="184" width="8" height="72"/><rect x="232" y="184" width="8" height="72"/><rect x="306" y="184" width="8" height="72"/></g>
+              <rect x="82" y="176" width="236" height="8" fill="#4C7AB5"/>
+              <g fill="none" stroke="#8FB0DA" stroke-linejoin="round"><polyline stroke-width="3" points="70,176 200,118 330,176"/><line stroke-width="2" x1="200" y1="118" x2="200" y2="176"/><line stroke-width="1.5" x1="135" y1="147" x2="135" y2="176"/><line stroke-width="1.5" x1="265" y1="147" x2="265" y2="176"/></g>
+            </g>
+            <g class="s" data-s="5">
+              <polygon points="70,176 200,118 330,176" fill="#3A6196" stroke="#C9D8EC" stroke-width="1.6" stroke-linejoin="round"/>
+              <g fill="#F5B21A">
+                <rect x="96" y="192" width="59" height="60" opacity=".92"/><rect x="169" y="192" width="59" height="60" opacity=".92"/><rect x="242" y="192" width="59" height="60" opacity=".92"/>
+                <rect x="96" y="268" width="59" height="68" opacity=".92"/><rect x="242" y="268" width="59" height="68" opacity=".92"/>
+                <rect x="185" y="292" width="30" height="48"/>
+              </g>
+              <circle cx="338" cy="104" r="22" fill="#F5B21A"/><path d="M328 104l7 7 13-14" fill="none" stroke="#0B1F3A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+          <div class="cap"><span>Langkah <b id="stg-n">5</b> / 5</span><span id="stg-t">Serahan</span></div>
+        </div>
+      </div>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Tinjau tapak</h3><p>Kami datang, ukur dan dengar apa yang anda mahu. Tiada caj untuk lawatan pertama.</p></li>
+        <li><span class="n">2</span><h3>Sebut harga</h3><p>Anggaran bertulis dengan setiap item dinyatakan, supaya mudah dibanding dan disemak.</p></li>
+        <li><span class="n">3</span><h3>Perjanjian</h3><p>Skop, bayaran berperingkat dan jadual kerja dipersetujui dan ditandatangani.</p></li>
+        <li><span class="n">4</span><h3>Pembinaan</h3><p>Penyelia tapak sentiasa ada. Anda terima gambar kemajuan secara berkala.</p></li>
+        <li><span class="n">5</span><h3>Serahan</h3><p>Semakan bersama, pembaikan kecil diselesaikan, dan tempoh waranti bermula.</p></li>
+      </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="kenapa" style="padding-top:0">
+    <div class="wrap why">
+      <div class="why-panel">
+        <div>
+          <p class="eyebrow" style="color:var(--gold)">Kenapa pilih kami</p>
+          <h2>Kerja yang boleh dipercayai</h2>
+          <p>Kami tulis semuanya dalam perjanjian supaya tiada kejutan di tengah projek. Mahu tahu kos untuk kerja anda?</p>
+        </div>
+        <a class="btn btn-gold" data-wa href="https://wa.me/60100000000" target="_blank" rel="noopener">Minta sebut harga</a>
+      </div>
+      <ul class="pts">
+        <li><span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg></span><div><h3>Harga telus</h3><p>Setiap kerja ada harga dalam sebut harga. Perubahan skop dipersetujui bertulis dahulu.</p></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg></span><div><h3>Jadual dipegang</h3><p>Tarikh siap ditetapkan dalam perjanjian dan kemajuan dibandingkan dengan jadual itu.</p></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg></span><div><h3>Tapak kemas</h3><p>Kawasan kerja dibersihkan setiap hari. Jiran dan penghuni tak terganggu dengan sisa binaan.</p></div></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg></span><div><h3>Waranti kerja</h3><p>Kerja yang tak menepati kualiti dibaiki, dalam tempoh waranti yang dinyatakan.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NOTA: maklumat lesen di bawah ialah penanda tempat. Isi dengan nombor dan butiran sebenar. -->
+  <section class="creds-sec" aria-label="Lesen dan pendaftaran">
+    <div class="wrap">
+      <p class="eyebrow">Lesen dan pendaftaran</p>
+      <dl class="creds">
+        <div><dt>Pendaftaran syarikat (SSM)</dt><dd>000000-X</dd></div>
+        <div><dt>Kontraktor CIDB</dt><dd>Gred G_ · 0000000000</dd></div>
+        <div><dt>Insurans kerja (CAR)</dt><dd>Nama penanggung insurans</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap faq">
+      <div class="sec-head">
+        <p class="eyebrow">Soalan lazim</p>
+        <h2>Apa yang biasa orang tanya</h2>
+        <p>Tak jumpa jawapan anda? Terus WhatsApp, kami balas secepat mungkin.</p>
+      </div>
+      <div class="faq-list">
+        <details open><summary>Berapa lama masa untuk siap?</summary><p>Bergantung pada skop. Ubah suai dapur biasanya mengambil beberapa minggu, manakala rumah baharu beberapa bulan. Tarikh siap yang tepat ditetapkan dalam perjanjian selepas kami tinjau tapak.</p></details>
+        <details><summary>Bagaimana bayaran dibuat?</summary><p>Biasanya bayaran dibahagi mengikut peringkat kerja yang siap, dan jadualnya ditulis dalam perjanjian supaya anda tahu bila dan berapa.</p></details>
+        <details><summary>Adakah perlu kelulusan pihak berkuasa?</summary><p>Sebahagian kerja seperti extension, kerja struktur dan rumah baharu memerlukan kelulusan pihak berkuasa tempatan. Kami terangkan apa yang diperlukan untuk projek anda semasa tinjau tapak.</p></details>
+        <details><summary>Bagaimana untuk dapat sebut harga?</summary><p>Hantar butiran dan gambar ruang anda melalui WhatsApp. Selepas tinjau tapak, anda terima sebut harga bertulis dengan setiap item dinyatakan.</p></details>
+        <details><summary>Boleh tinggal di rumah semasa kerja berjalan?</summary><p>Untuk ubah suai kecil biasanya boleh. Untuk kerja besar, kami cadangkan berpindah sementara. Kami bincang pilihan terbaik semasa tinjau tapak.</p></details>
+        <details><summary>Ada waranti untuk kerja yang dibuat?</summary><p>Tempoh waranti dinyatakan dalam perjanjian dan bermula dari tarikh serahan. Kerja yang tak menepati kualiti akan dibaiki dalam tempoh itu.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="hubungi" class="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <p class="eyebrow">Hubungi kami</p>
+          <h2>Ceritakan kerja anda</h2>
+          <p>Cara paling cepat ialah WhatsApp. Isi borang di sebelah dan mesej siap ditulis untuk anda.</p>
+        </div>
+        <dl class="info">
+          <div><dt>Telefon / WhatsApp</dt><dd id="v-tel">010-000 0000</dd><button class="copy" type="button" data-copy="v-tel">Salin</button></div>
+          <div><dt>Emel</dt><dd id="v-emel">nama@syarikat.com.my</dd><button class="copy" type="button" data-copy="v-emel">Salin</button></div>
+          <div><dt>Alamat pejabat</dt><dd id="v-alamat">No. 00, Jalan Contoh 1, Taman Contoh, Selangor</dd><button class="copy" type="button" data-copy="v-alamat">Salin</button></div>
+          <div><dt>Waktu operasi</dt><dd>Isnin hingga Sabtu, 8.30 pagi – 5.30 petang</dd></div>
+        </dl>
+      </div>
+      <form id="borang" onsubmit="return false" novalidate>
+        <div class="field"><label for="f-nama">Nama anda</label><input id="f-nama" name="nama" type="text" autocomplete="name" placeholder="Contoh: Ahmad"></div>
+        <div class="field"><label for="f-jenis">Jenis kerja</label>
+          <select id="f-jenis" name="jenis">
+            <option>Rumah baharu</option><option>Ubah suai rumah</option><option>Kedai atau pejabat</option><option>Kerja struktur</option><option>Bumbung dan siling</option><option>Baik pulih</option><option>Lain-lain</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-lokasi">Lokasi projek</label><input id="f-lokasi" name="lokasi" type="text" placeholder="Contoh: Taman Contoh, Selangor"></div>
+        <div class="field"><label for="f-butiran">Butiran ringkas</label><textarea id="f-butiran" name="butiran" placeholder="Contoh: nak besarkan dapur dan tukar bumbung"></textarea></div>
+        <a class="btn btn-gold" id="wa-form" href="https://wa.me/60100000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg>Hantar di WhatsApp</a>
+        <p class="form-note">Butang ini membuka WhatsApp dengan mesej yang sudah siap. Anda tekan hantar sendiri.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr">2026</span> Nama Syarikat Sdn Bhd</span>
+    <span>No. SSM: 000000-X · No. CIDB: 0000000000</span>
+  </div>
+</footer>
+
+<a class="btn btn-gold wa-float" data-wa href="https://wa.me/60100000000" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+  var WA = "60100000000"; // Gantikan dengan nombor sebenar, format antarabangsa tanpa + atau sengkang
+  var HELLO = "Hai, saya nak tanya pasal kerja pembinaan.";
+  function wa(text){ return "https://wa.me/" + WA + "?text=" + encodeURIComponent(text); }
+  document.querySelectorAll("[data-wa]").forEach(function(a){ a.href = wa(HELLO); });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* Lukisan kad projek */
+  function windows(cols, rows, x0, y0, dx, dy, w, h){
+    var s = "";
+    for (var j = 0; j < rows; j++) for (var i = 0; i < cols; i++)
+      s += '<rect class="ln" x="' + (x0 + i*dx) + '" y="' + (y0 + j*dy) + '" width="' + w + '" height="' + h + '"/>';
+    return s;
+  }
+  var G = '<line class="ln" x1="16" y1="130" x2="224" y2="130"/>';
+  var draw = {
+    house: G + '<rect class="ln" x="62" y="62" width="116" height="68"/><polygon class="ln" points="50,62 120,24 190,62"/><rect class="acc" x="108" y="94" width="24" height="36"/><rect class="ln" x="72" y="78" width="22" height="20"/><rect class="ln" x="146" y="78" width="22" height="20"/>',
+    shop: G + '<rect class="ln" x="48" y="28" width="144" height="102"/><line class="thin" x1="48" y1="62" x2="192" y2="62"/><line class="thin" x1="48" y1="96" x2="192" y2="96"/>' + windows(3,2,62,38,44,34,28,18) + '<rect class="acc" x="60" y="104" width="120" height="26"/>',
+    ext: G + '<rect class="ln" x="30" y="70" width="80" height="60"/><polygon class="ln" points="22,70 70,40 118,70"/><rect class="ln" x="44" y="86" width="20" height="18"/><rect class="ln" x="80" y="94" width="18" height="36"/><rect class="accsoft" x="118" y="88" width="88" height="42"/><text class="txt" x="162" y="113" text-anchor="middle">BARU</text>',
+    roof: G + '<polyline class="ln" points="30,112 120,44 210,112 30,112"/><line class="ln" x1="120" y1="44" x2="120" y2="112"/><line class="ln" x1="75" y1="78" x2="75" y2="112"/><line class="ln" x1="165" y1="78" x2="165" y2="112"/><line class="ln" x1="75" y1="78" x2="120" y2="112"/><line class="ln" x1="165" y1="78" x2="120" y2="112"/><line class="ln" x1="30" y1="112" x2="30" y2="130"/><line class="ln" x1="210" y1="112" x2="210" y2="130"/><rect class="acc" x="110" y="106" width="20" height="6"/>',
+    office: G + '<rect class="ln" x="70" y="18" width="100" height="112"/>' + windows(3,4,82,28,28,18,18,10) + '<rect class="acc" x="70" y="106" width="100" height="24"/><line class="ln" x1="120" y1="106" x2="120" y2="130"/>',
+    plan: '<rect class="ln" x="34" y="20" width="172" height="110" style="stroke-width:2.4"/><line class="ln" x1="110" y1="20" x2="110" y2="62"/><line class="ln" x1="110" y1="78" x2="110" y2="130"/><line class="ln" x1="34" y1="82" x2="80" y2="82"/><line class="ln" x1="96" y1="82" x2="110" y2="82"/><line class="ln" x1="150" y1="78" x2="150" y2="130"/><line class="ln" x1="110" y1="78" x2="150" y2="78"/><rect class="acc" x="156" y="26" width="44" height="28"/><path class="thin" d="M80 82 A16 16 0 0 1 96 66"/><path class="thin" d="M110 62 A16 16 0 0 0 94 78"/>'
+  };
+  var projects = [
+    {t:"Rumah teres dua tingkat", c:"rumah", cl:"Rumah baharu", l:"Selangor", d:"8 bulan", s:"2,200 kaki persegi", k:"house"},
+    {t:"Lot kedai tiga tingkat", c:"komersial", cl:"Komersial", l:"Selangor", d:"11 bulan", s:"3 tingkat", k:"shop"},
+    {t:"Extension dapur dan ruang makan", c:"ubahsuai", cl:"Ubah suai", l:"Kuala Lumpur", d:"10 minggu", s:"480 kaki persegi", k:"ext"},
+    {t:"Bumbung rangka keluli ringan", c:"bumbung", cl:"Bumbung", l:"Selangor", d:"3 minggu", s:"1,800 kaki persegi", k:"roof"},
+    {t:"Fit-out pejabat", c:"komersial", cl:"Komersial", l:"Kuala Lumpur", d:"6 minggu", s:"3,000 kaki persegi", k:"office"},
+    {t:"Ubah suai rumah penuh", c:"ubahsuai", cl:"Ubah suai", l:"Selangor", d:"4 bulan", s:"1,600 kaki persegi", k:"plan"}
+  ];
+  var box = document.getElementById("cards");
+  box.innerHTML = projects.map(function(p){
+    // Untuk guna gambar sebenar, tambah medan img pada projek, contohnya img:"data:image/jpeg;base64,..." atau laluan fail
+    var pic = p.img ? '<img class="shot" src="' + p.img + '" alt="' + p.t + '" loading="lazy">' : '<svg class="drawing dr" viewBox="0 0 240 150" role="img" aria-label="Lukisan ringkas ' + p.t + '">' + draw[p.k] + '</svg>';
+    return '<article class="card" data-c="' + p.c + '"><div class="plate' + (p.img ? ' photo' : '') + '"><span class="cat">' + p.cl + '</span>' + pic + '</div>' +
+      '<div class="body"><h3>' + p.t + '</h3><p class="meta">' + p.l + ' · ' + p.d + ' · ' + p.s + '</p></div></article>';
+  }).join("");
+  var btns = document.querySelectorAll(".filters button");
+  btns.forEach(function(b){
+    b.addEventListener("click", function(){
+      btns.forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      var f = b.dataset.f;
+      box.querySelectorAll(".card").forEach(function(c){ c.hidden = !(f === "semua" || c.dataset.c === f); });
+    });
+  });
+
+  /* Statistik naik bila kelihatan */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        var el = en.target, n = +el.dataset.n, pre = el.dataset.pre || "", suf = el.dataset.suf || "", t0 = null;
+        function step(ts){
+          if (t0 === null) t0 = ts;
+          var p = Math.min((ts - t0) / 1100, 1);
+          el.textContent = pre + Math.round(n * (1 - Math.pow(1 - p, 3))) + suf;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, {threshold: 0.6});
+    document.querySelectorAll("[data-n]").forEach(function(el){ io.observe(el); });
+  }
+
+  /* Salin maklumat */
+  document.querySelectorAll("[data-copy]").forEach(function(b){
+    var label = b.textContent;
+    b.addEventListener("click", function(){
+      var el = document.getElementById(b.dataset.copy);
+      var done = function(msg){ b.textContent = msg; setTimeout(function(){ b.textContent = label; }, 1600); };
+      var fallback = function(){
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done("Dipilih");
+      };
+      try { navigator.clipboard.writeText(el.textContent.trim()).then(function(){ done("Disalin"); }, fallback); }
+      catch (e) { fallback(); }
+    });
+  });
+
+  /* Slider sebelum dan selepas */
+  var baEl = document.getElementById("ba"), baIn = document.getElementById("ba-range");
+  if (baEl && baIn) {
+    var setBa = function(){ baEl.style.setProperty("--pos", baIn.value + "%"); };
+    baIn.addEventListener("input", setBa);
+    setBa();
+  }
+
+  /* Kedalaman hero: latar bergerak lebih perlahan daripada bangunan */
+  var par = [].slice.call(document.querySelectorAll("[data-par]"));
+  if (par.length && !reduce) {
+    var pt = false;
+    var pf = function(){
+      pt = false;
+      var y = Math.min(window.pageYOffset || 0, 700);
+      par.forEach(function(el){ el.style.transform = "translateY(" + (y * parseFloat(el.dataset.par)).toFixed(1) + "px)"; });
+    };
+    window.addEventListener("scroll", function(){ if (!pt) { pt = true; requestAnimationFrame(pf); } }, {passive: true});
+  }
+
+  /* Bangunan naik ikut scroll */
+  var buildEl = document.getElementById("build");
+  if (buildEl) {
+    var bsteps = [].slice.call(document.querySelectorAll(".steps li"));
+    var art = document.getElementById("proc-art");
+    var groups = [].slice.call(buildEl.querySelectorAll(".s"));
+    var titles = ["Tinjau tapak", "Sebut harga", "Perjanjian", "Pembinaan", "Serahan"];
+    var stgN = document.getElementById("stg-n"), stgT = document.getElementById("stg-t");
+    var cur = -1, ticking = false;
+    buildEl.classList.add("js");
+    var calc = function(){
+      var narrow = window.matchMedia("(max-width:900px)").matches;
+      var line = narrow ? art.getBoundingClientRect().bottom + 60 : window.innerHeight * 0.5;
+      var n = 0;
+      bsteps.forEach(function(li){ if (li.getBoundingClientRect().top < line) n++; });
+      return Math.max(1, n);
+    };
+    var apply = function(){
+      ticking = false;
+      var s = calc();
+      if (s === cur) return;
+      cur = s;
+      groups.forEach(function(g){
+        g.classList.toggle("show", +g.dataset.s <= s);
+        g.classList.toggle("fade", !!g.dataset.fade && s >= +g.dataset.fade);
+      });
+      bsteps.forEach(function(li, i){
+        li.classList.toggle("on", i === s - 1);
+        li.classList.toggle("done", i < s - 1);
+        li.classList.toggle("dim", i > s - 1);
+      });
+      stgN.textContent = s;
+      stgT.textContent = titles[s - 1];
+    };
+    var req = function(){ if (!ticking){ ticking = true; requestAnimationFrame(apply); } };
+    window.addEventListener("scroll", req, {passive: true});
+    window.addEventListener("resize", req);
+    apply();
+  }
+
+  /* Pelan lantai interaktif */
+  // Tempoh di bawah ialah contoh. Semak dengan kontraktor.
+  var rooms = {
+    utama: {n:"Bilik tidur utama", d:"Naikkan taraf bilik tidur supaya lebih selesa dan kemas, dari lantai sampai siling.", t:["Kabinet pakaian","Lantai","Cat & siling","Bilik persalinan"], w:"1 – 3 minggu"},
+    air: {n:"Bilik air", d:"Atasi bocor dan lembap, kemudian pasang jubin dan sanitari baharu dengan kalis air yang betul.", t:["Kalis air","Jubin","Sanitari & paip","Pengudaraan"], w:"2 – 3 minggu"},
+    tidur2: {n:"Bilik tidur 2", d:"Sesuai dijadikan bilik anak, bilik tetamu atau ruang kerja, lengkap dengan kabinet dan pendawaian tambahan.", t:["Lantai","Cat","Kabinet","Pendawaian"], w:"1 – 2 minggu"},
+    tamu: {n:"Ruang tamu", d:"Ubah susun atur, tukar lantai dan siapkan siling serta pencahayaan untuk ruang yang lebih lapang.", t:["Lantai","Siling plaster","Cat","Pintu & tingkap"], w:"1 – 3 minggu"},
+    dapur: {n:"Dapur", d:"Dapur paling kerap diubah suai. Kabinet, meja, jubin, paip dan pendawaian disiapkan sebagai satu kerja.", t:["Kabinet & meja","Jubin","Paip & pendawaian","Siling & lampu"], w:"2 – 4 minggu"}
+  };
+  var roomEls = [].slice.call(document.querySelectorAll(".room"));
+  var pick = function(key){
+    var r = rooms[key];
+    if (!r) return;
+    roomEls.forEach(function(g){ g.setAttribute("aria-pressed", g.dataset.room === key ? "true" : "false"); });
+    document.getElementById("pd-name").textContent = r.n;
+    document.getElementById("pd-desc").textContent = r.d;
+    var tg = document.getElementById("pd-tags");
+    tg.textContent = "";
+    r.t.forEach(function(t){ var s = document.createElement("span"); s.textContent = t; tg.appendChild(s); });
+    document.getElementById("pd-time").textContent = r.w;
+    document.getElementById("pd-wa").href = wa("Hai, saya nak tanya pasal kerja ubah suai " + r.n.toLowerCase() + ".");
+  };
+  roomEls.forEach(function(g){
+    g.addEventListener("click", function(){ pick(g.dataset.room); });
+    g.addEventListener("keydown", function(e){
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(g.dataset.room); }
+    });
+  });
+  pick("dapur");
+
+  /* Borang menjadi mesej WhatsApp */
+  var fields = ["f-nama","f-jenis","f-lokasi","f-butiran"].map(function(id){ return document.getElementById(id); });
+  var link = document.getElementById("wa-form");
+  function build(){
+    var v = fields.map(function(f){ return f.value.trim(); });
+    var lines = [HELLO];
+    if (v[0]) lines.push("Nama: " + v[0]);
+    if (v[1]) lines.push("Jenis kerja: " + v[1]);
+    if (v[2]) lines.push("Lokasi: " + v[2]);
+    if (v[3]) lines.push("Butiran: " + v[3]);
+    link.href = wa(lines.join("\n"));
+  }
+  fields.forEach(function(f){ f.addEventListener("input", build); f.addEventListener("change", build); });
+  build();
+})();
+</script>
+</body>
+</html>
